@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SatGlobe</string>
+    <string name="app_tagline">GNSS na żywo</string>
+    <string name="start_title">Zobacz satelity nad sobą</string>
+    <string name="start_body">SatGlobe odczytuje status GNSS wyłącznie, gdy aplikacja jest otwarta. Lokalizacja nie opuszcza telefonu.</string>
+    <string name="start_button">Uruchom skan GNSS</string>
+    <string name="permission_required">Do danych satelitarnych potrzebna jest dokładna lokalizacja.</string>
+    <string name="open_settings">Otwórz ustawienia</string>
+    <string name="visible_label">WIDOCZNE</string>
+    <string name="used_label">UŻYTE W FIX</string>
+    <string name="signal_label">ŚR. SYGNAŁ</string>
+    <string name="waiting_location">Czekam na pierwszą pozycję GPS…</string>
+    <string name="waiting_satellites">Nasłuchuję sygnału GNSS…</string>
+    <string name="visualization_note">Położenie satelitów pokazuje kierunek azymut/elewacja; wysokość orbity jest umowna.</string>
+</resources>
