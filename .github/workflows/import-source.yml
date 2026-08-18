@@ -1,0 +1,33 @@
+name: Import SatGlobe source
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Expand source bundle
+        run: |
+          unzip -o SatGlobe-Android-Source.zip
+          rm -f SatGlobe-Android-Source.zip .github/workflows/import-source.yml
+
+      - name: Commit imported source
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to import"
+            exit 0
+          fi
+          git commit -m "Import complete SatGlobe Android source"
+          git push
